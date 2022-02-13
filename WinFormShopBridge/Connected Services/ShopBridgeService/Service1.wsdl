@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58152/ShopBridgeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58152/ShopBridgeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58152/ShopBridgeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ShopBridgeService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IShopBridgeService_GetInventoryDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryDetail" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_GetInventoryDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_GetInventoryDetailByInventoryId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryDetailByInventoryId" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_GetInventoryDetailByInventoryId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryDetailByInventoryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_SaveInventoryDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInventoryDetail" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_SaveInventoryDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveInventoryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_UpdateInventoryDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryDetail" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_UpdateInventoryDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInventoryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_DeleteInventoryDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInventoryDetail" />
+  </wsdl:message>
+  <wsdl:message name="IShopBridgeService_DeleteInventoryDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInventoryDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IShopBridgeService">
+    <wsdl:operation name="GetInventoryDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShopBridgeService/GetInventoryDetail" message="tns:IShopBridgeService_GetInventoryDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShopBridgeService/GetInventoryDetailResponse" message="tns:IShopBridgeService_GetInventoryDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryDetailByInventoryId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShopBridgeService/GetInventoryDetailByInventoryId" message="tns:IShopBridgeService_GetInventoryDetailByInventoryId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShopBridgeService/GetInventoryDetailByInventoryIdResponse" message="tns:IShopBridgeService_GetInventoryDetailByInventoryId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveInventoryDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShopBridgeService/SaveInventoryDetail" message="tns:IShopBridgeService_SaveInventoryDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShopBridgeService/SaveInventoryDetailResponse" message="tns:IShopBridgeService_SaveInventoryDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShopBridgeService/UpdateInventoryDetail" message="tns:IShopBridgeService_UpdateInventoryDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShopBridgeService/UpdateInventoryDetailResponse" message="tns:IShopBridgeService_UpdateInventoryDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInventoryDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShopBridgeService/DeleteInventoryDetail" message="tns:IShopBridgeService_DeleteInventoryDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShopBridgeService/DeleteInventoryDetailResponse" message="tns:IShopBridgeService_DeleteInventoryDetail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IShopBridgeService" type="tns:IShopBridgeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInventoryDetail">
+      <soap:operation soapAction="http://tempuri.org/IShopBridgeService/GetInventoryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryDetailByInventoryId">
+      <soap:operation soapAction="http://tempuri.org/IShopBridgeService/GetInventoryDetailByInventoryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveInventoryDetail">
+      <soap:operation soapAction="http://tempuri.org/IShopBridgeService/SaveInventoryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInventoryDetail">
+      <soap:operation soapAction="http://tempuri.org/IShopBridgeService/UpdateInventoryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInventoryDetail">
+      <soap:operation soapAction="http://tempuri.org/IShopBridgeService/DeleteInventoryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IShopBridgeService" binding="tns:BasicHttpBinding_IShopBridgeService">
+      <soap:address location="http://localhost:58152/ShopBridgeService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
