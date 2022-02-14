@@ -33,6 +33,7 @@ namespace WinFormShopBridge
             ClearData();
 
             isInitialLoad = false;
+            TextBoxInventoryName.Focus();
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)

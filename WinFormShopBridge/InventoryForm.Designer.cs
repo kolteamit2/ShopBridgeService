@@ -52,8 +52,10 @@
             this.GridViewInventory.Name = "GridViewInventory";
             this.GridViewInventory.ReadOnly = true;
             this.GridViewInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridViewInventory.ShowRowErrors = false;
             this.GridViewInventory.Size = new System.Drawing.Size(506, 296);
             this.GridViewInventory.TabIndex = 0;
+            this.GridViewInventory.TabStop = false;
             this.GridViewInventory.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.GridViewInventory_DataBindingComplete);
             this.GridViewInventory.SelectionChanged += new System.EventHandler(this.GridViewInventory_SelectionChanged);
             // 
@@ -90,7 +92,7 @@
             this.TextBoxInventoryName.MaxLength = 50;
             this.TextBoxInventoryName.Name = "TextBoxInventoryName";
             this.TextBoxInventoryName.Size = new System.Drawing.Size(187, 20);
-            this.TextBoxInventoryName.TabIndex = 4;
+            this.TextBoxInventoryName.TabIndex = 1;
             // 
             // TextBoxDescription
             // 
@@ -99,7 +101,7 @@
             this.TextBoxDescription.Multiline = true;
             this.TextBoxDescription.Name = "TextBoxDescription";
             this.TextBoxDescription.Size = new System.Drawing.Size(187, 46);
-            this.TextBoxDescription.TabIndex = 5;
+            this.TextBoxDescription.TabIndex = 2;
             // 
             // TextBoxPrice
             // 
@@ -107,7 +109,7 @@
             this.TextBoxPrice.MaxLength = 8;
             this.TextBoxPrice.Name = "TextBoxPrice";
             this.TextBoxPrice.Size = new System.Drawing.Size(187, 20);
-            this.TextBoxPrice.TabIndex = 6;
+            this.TextBoxPrice.TabIndex = 3;
             this.TextBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxPrice_KeyPress);
             // 
             // ButtonSave
@@ -115,7 +117,7 @@
             this.ButtonSave.Location = new System.Drawing.Point(280, 113);
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.Size = new System.Drawing.Size(75, 23);
-            this.ButtonSave.TabIndex = 7;
+            this.ButtonSave.TabIndex = 4;
             this.ButtonSave.Text = "Save";
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
@@ -125,7 +127,7 @@
             this.ButtonClose.Location = new System.Drawing.Point(442, 113);
             this.ButtonClose.Name = "ButtonClose";
             this.ButtonClose.Size = new System.Drawing.Size(75, 23);
-            this.ButtonClose.TabIndex = 8;
+            this.ButtonClose.TabIndex = 7;
             this.ButtonClose.Text = "Close";
             this.ButtonClose.UseVisualStyleBackColor = true;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
@@ -135,7 +137,7 @@
             this.ButtonClear.Location = new System.Drawing.Point(361, 113);
             this.ButtonClear.Name = "ButtonClear";
             this.ButtonClear.Size = new System.Drawing.Size(75, 23);
-            this.ButtonClear.TabIndex = 9;
+            this.ButtonClear.TabIndex = 6;
             this.ButtonClear.Text = "Clear";
             this.ButtonClear.UseVisualStyleBackColor = true;
             this.ButtonClear.Click += new System.EventHandler(this.ButtonClear_Click);
@@ -145,7 +147,7 @@
             this.ButtonUpdate.Location = new System.Drawing.Point(280, 113);
             this.ButtonUpdate.Name = "ButtonUpdate";
             this.ButtonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.ButtonUpdate.TabIndex = 10;
+            this.ButtonUpdate.TabIndex = 4;
             this.ButtonUpdate.Text = "Update";
             this.ButtonUpdate.UseVisualStyleBackColor = true;
             this.ButtonUpdate.Visible = false;
@@ -156,7 +158,7 @@
             this.ButtonDelete.Location = new System.Drawing.Point(199, 113);
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(75, 23);
-            this.ButtonDelete.TabIndex = 11;
+            this.ButtonDelete.TabIndex = 5;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
             this.ButtonDelete.Visible = false;
